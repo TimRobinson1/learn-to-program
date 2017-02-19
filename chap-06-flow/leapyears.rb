@@ -3,16 +3,17 @@ start = gets.chomp
 puts "Thanks. End year, please."
 final = gets.chomp
 
+# Establishing array and integer
 array = (start..final).to_a
 leap = 0
 
-# At this stage, program only takes the input and makes it an array (to be sorted through later)
+# Looping through each year in array.
 
-array.each do |x|
-  y = x.to_i
-  if (y % 4 == 0) && (y % 100 != 0)
+array.each do |i|
+  x = i.to_i
+  if (x % 4 == 0) && (x % 100 != 0)
     leap += 1
-  elsif (y % 400 == 0)
+  elsif (x % 400 == 0)
     leap += 1
   end
 end
