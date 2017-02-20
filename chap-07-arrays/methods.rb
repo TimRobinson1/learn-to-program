@@ -4,10 +4,10 @@ puts foods
 puts ""
 puts foods.to_s
 puts ""
-puts foods.jin(", ")
+puts foods.join(", ")
 puts ""
 puts foods.join(" :) ") + "  8)"
 
 200.times do
-  puts []
+  puts [[], []]
 end
