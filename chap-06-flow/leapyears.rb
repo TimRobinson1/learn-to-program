@@ -1,22 +1,15 @@
 puts "Start year, please."
 start = gets.chomp
+year = start.to_i
 puts "Thanks. End year, please."
 final = gets.chomp
 
-# Establishing array and integer
-array = (start..final).to_a
-leap = []
-
-# Looping through each year in array.
-
-array.each do |i|
-  x = i.to_i
-  if (x % 4 == 0) && (x % 100 != 0)
-    leap.push(x)
-  elsif (x % 400 == 0)
-    leap.push(x)
+puts "The leap years in the range between #{start} and #{final} are:"
+while year <= final.to_i
+  if (year % 4 == 0) && (year % 100 != 0)
+    puts year
+  elsif (year % 400 == 0)
+    puts year
   end
+  year += 1
 end
-
-puts "There are #{leap.count} leap years between #{start} and #{final}."
-puts "These leap years are #{leap.join(', ')}."
