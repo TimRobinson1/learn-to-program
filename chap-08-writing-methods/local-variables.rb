@@ -1,10 +1,10 @@
-def doubleIt num
-  numTimes2 = num*2
-  puts num.to_s + " doubled is " + numTimes2.to_s
+# An example of the convenience of local variables
+
+def littlePest var
+  var = nil
+  puts "HAHA!  I ruined your variable!"
 end
 
-doubleIt 33
-
-# Example of a local variable failing to be used
-doubleThis 44
-puts numTimes2.to_s
+var = "You can't even touch my variable!"
+littlePest var
+puts var
