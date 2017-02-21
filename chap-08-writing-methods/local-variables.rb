@@ -4,3 +4,7 @@ def doubleIt num
 end
 
 doubleIt 33
+
+# Example of a local variable failing to be used
+doubleThis 44
+puts numTimes2.to_s
