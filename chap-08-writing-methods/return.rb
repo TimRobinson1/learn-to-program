@@ -1,4 +1,9 @@
 # Testing how 'puts' returns nil
 
-returnVal = puts "This puts returned:"
-puts returnVal
+def sayMoo numberOfMoos
+  puts "Mooo...."*numberOfMoos
+  "yellow submarine"
+end
+
+x = sayMoo 2
+puts x
