@@ -14,7 +14,7 @@ def englishNumber number
   # write and left... get it?  :)
   left  = number
   write = left/100          # How many hundreds left to write out?
-  left  = left - write*10  # Subtract off those hundreds.
+  left  = left - write*100  # Subtract off those hundreds.
 
   if write > 0
     return 'one hundred'
