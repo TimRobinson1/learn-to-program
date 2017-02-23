@@ -15,8 +15,6 @@ def ask question
       puts "Please answer 'yes' or 'no'."
     end
   end
-
-  answer # This is our return value
 end
 
 puts "Hello, and thank you for answering these questions:"
