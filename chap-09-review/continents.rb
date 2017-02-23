@@ -35,4 +35,4 @@ def continent_size world, x, y
   size
 end
 
-puts continent_size(world, 3, 5)
+puts continent_size(world, 5, 5)
