@@ -7,9 +7,9 @@ def ask question
     if (reply == "yes" or reply == "no")
       goodAnswer = true
       if reply == "yes"
-        answer = true
+        return true
       else
-        answer = false
+        return false
       end
     else
       puts "Please answer 'yes' or 'no'."
@@ -19,7 +19,7 @@ def ask question
   answer # This is our return value
 end
 
-puts "Hello, and thank you for..."
+puts "Hello, and thank you for answering these questions:"
 puts ""
 
 ask "Do you like eating tacos?"
@@ -30,6 +30,6 @@ ask "Do you like eating sopapillas?"
 
 puts ""
 puts "END"
-puts "Thank you for..."
+puts "Thank you for answering."
 puts ""
-puts wetsBed
+puts "It's #{wetsBed} that you wet the bed!"
