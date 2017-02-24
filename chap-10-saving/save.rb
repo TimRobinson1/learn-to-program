@@ -1,4 +1,4 @@
-filename = "ListenerQuote.txt"
+filename = "./chap-10-saving/ListenerQuote.txt"
 test_string = "I promise that I swear absolutely that " +
 "I will never mention gazpacho soup again."
 
