@@ -2,3 +2,10 @@
 - Slick Shoes
 - Bully Blinders
 - Pinchers of Peril
+- true
+- 'true'
+- 10
+- '10'
+- :contor
+- test variable
+- test

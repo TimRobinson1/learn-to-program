@@ -12,7 +12,9 @@ def yaml_load filename
   YAML::load yaml_string
 end
 
-test_array = ["Slick Shoes", "Bully Blinders", "Pinchers of Peril"]
+variable = "test variable"
+
+test_array = ["Slick Shoes", "Bully Blinders", "Pinchers of Peril", true, "true", 10, '10', :contor, variable, "test"]
 
 filename = "./chap-10-saving/DatasGadgets.txt"
 
@@ -22,4 +24,4 @@ yaml_save test_array, filename
 # Loading
 read_array = yaml_load filename
 
-puts(read_array == test_array)
+puts read_array[2]
