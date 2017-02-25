@@ -14,7 +14,7 @@ end
 
 test_array = ["Slick Shoes", "Bully Blinders", "Pinchers of Peril"]
 
-filename = "DatasGadgets.txt"
+filename = "./chap-10-saving/DatasGadgets.txt"
 
 # Saving
 yaml_save test_array, filename
