@@ -10,8 +10,9 @@ dict_hash['shasha'] = 'truck'
 dict_hash['sh-sha'] = 'Alicia'
 
 dict_array.each do |word|
-puts word
+  puts word
 end
+
 dict_hash.each do |c_word, word|
-puts "#{c_word}: #{word}"
+  puts "#{c_word}: #{word}"
 end
