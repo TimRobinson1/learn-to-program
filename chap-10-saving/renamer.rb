@@ -1,6 +1,6 @@
-Dir.chir 'C:/Documents and Settings/Katy/PictureInbox'
+Dir.chdir '../Processed'
 
-pic_names = Dir['F:/**/*.jpg']
+pic_names = Dir['../Pictures/**/*.png']
 
 puts 'What would you like to call this batch?'
 batch_name = gets.chomp
@@ -19,7 +19,7 @@ pic_names.each do |names|
     "#{batch_name}#{pic_number}.jpg"
   end
 
-  File.rename name, new_name
+  File.rename names, new_name
 
   pic_number = pic_number + 1
 end
