@@ -1,19 +1,25 @@
 require "yaml"
 
-test_array = ["Give Quiche A Chance", "Mutants Out!", "Chameleonic Life-Forms, No Thanks"]
-
-test_string = test_array.to_yaml
-
-filename = "./chap-10-saving/RimmerTShirts.txt"
-
-File.open filename, 'w' do |f|
-  f.write test_string
+def yaml_save object, filename
+  File.open filename, 'w' do |f|
+    f.write(object.to_yaml)
+  end
 end
 
-read_string = File.read filename
+def yaml_load filename
+  yaml_string = File.read filename
 
-read_array = YAML::load read_string
+  YAML::load yaml_string
+end
 
-# These verify that what is saved is correct.
-puts(read_string == test_string)
+test_array = ["Slick Shoes", "Bully Blinders", "Pinchers of Peril"]
+
+filename = "DatasGadgets.txt"
+
+# Saving
+yaml_save test_array, filename
+
+# Loading
+read_array = yaml_load filename
+
 puts(read_array == test_array)
