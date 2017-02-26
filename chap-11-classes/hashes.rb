@@ -16,3 +16,8 @@ end
 dict_hash.each do |c_word, word|
   puts "#{c_word}: #{word}"
 end
+
+# You can use anything to hold the slot in a hash
+weird_hash = Hash.new
+weird_hash[12] = "monkeys"
+weird_hash[[]] = "emptiness"
