@@ -21,3 +21,8 @@ end
 weird_hash = Hash.new
 weird_hash[12] = "monkeys"
 weird_hash[[]] = "emptiness"
+weird_hash[Time.new] = "The time!"
+
+puts weird_hash[12] # Monkeys
+puts weird_hash[10 + 2] # Also monkeys
+puts weird_hash[[]] # Emptiness
