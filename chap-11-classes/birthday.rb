@@ -7,7 +7,7 @@ def yaml_load filename
   YAML::load yaml_string
 end
 
-# Text file locatio up
+# Text file location
 filename = "./chap-11-classes/Birthdays.txt"
 
 # Hash for converting the month into an integer
@@ -57,8 +57,8 @@ current_month = now.to_s[5..6].to_i
 current_day = now.to_s[8..9].to_i
 
 # String representing when their next birthday is.
-is_next_year = "#{input}'s next birthday is next year, #{date[0..6]} 2018"
-is_this_year = "#{input}'s next birthday is this year, on #{date[0..5]}."
+is_next_year = "#{input}'s next birthday is next year: #{date[0..6]} 2018"
+is_this_year = "#{input}'s next birthday is this year: #{date[0..5]}."
 
 # Ages for this year, next year and the current day.
 age = "He will be #{2018 - y} years old."
