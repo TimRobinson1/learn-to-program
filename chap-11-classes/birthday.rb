@@ -14,4 +14,9 @@ read_array = yaml_load filename
 puts "Who's birthday would you like to check?"
 input = gets.chomp
 
-puts read_array[input]
+if (read_array[input] == nil)
+  puts "Either that name is not on the list,"
+  puts "or it has been mispelled."
+else
+  puts read_array[input]
+end
