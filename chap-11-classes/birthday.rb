@@ -16,6 +16,16 @@ months = {"Jan" => "01", "Feb" => "02", "Mar" => "03", "Apr" => "04",
 # Loading
 read_array = yaml_load filename
 
+puts "Would you like to..."
+puts "1) View the list."
+puts "2) Check birth date with name."
+input = gets.chomp
+
+if input == "1"
+  puts read_array.to_yaml
+  exit(0)
+end
+
 puts "Who's birthday would you like to check?"
 input = gets.chomp
 
