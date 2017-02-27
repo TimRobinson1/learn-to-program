@@ -19,13 +19,23 @@ read_array = yaml_load filename
 puts "Who's birthday would you like to check?"
 input = gets.chomp
 
+if (read_array[input] == nil)
+  if read_array["Dave #{input}"] != nil
+    puts "Changing to 'Dave #{input}'..."
+    input = "Dave #{input}"
+  else
+    puts "Please check the list or your spelling."
+    exit(0)
+  end
+end
+
 # Birth date read from file
 date = read_array[input][-12..-1]
 
 # Birth date broken down for ease into day, month and year - d, m, y
 m = months[date[0..2]].to_i
-d = date[4..5]
-y = date[-4..-1]
+d = date[4..5].to_i
+y = date[-4..-1].to_i
 
 # Current time, then broken into current day and month
 now = Time.now
@@ -37,26 +47,20 @@ is_next_year = "#{input}'s next birthday is: #{date[0..6]} 2018"
 is_this_year = "#{input}'s birthday is this year, on #{date[0..5]}."
 
 # Ages for this year, next year and the current day.
-age = "He will be #{2018 - y.to_i} years old."
-age_soon = "He will be #{2017 - y.to_i} years old."
-age_now = "He is #{2018 - y.to_i} years old."
+age = "He will be #{2018 - y} years old."
+age_soon = "He will be #{2017 - y} years old."
+age_now = "He is #{2018 - y} years old."
 
-
-if (read_array[input] == nil)
-  puts "Either that name is not on the list,"
-  puts "or it has been mispelled."
+if current_month > m
+  puts is_next_year
+  puts age
+elsif (current_day > d) && (current_month > m)
+  puts is_next_year
+  puts age
+elsif (current_day == d) && (current_month == m)
+  puts "Today is their birthday!"
+  puts age_now
 else
-  if current_month > m.to_i
-    puts is_next_year
-    puts age
-  elsif (current_day > d.to_i) && (current_month > m.to_i)
-    puts is_next_year
-    puts age
-  elsif (current_day == d.to_i) && (current_month == m.to_i)
-    puts "Today is their birthday!"
-    puts age_now
-  else
-    puts is_this_year
-    puts age_soon
-  end
+  puts is_this_year
+  puts age_soon
 end
