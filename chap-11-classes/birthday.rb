@@ -1,11 +1,13 @@
 require "yaml"
 
+# Loading function from file
 def yaml_load filename
   yaml_string = File.read filename
 
   YAML::load yaml_string
 end
 
+# Text file location
 filename = "./chap-11-classes/Birthdays.txt"
 
 # Hash for converting the month into an integer
@@ -16,9 +18,11 @@ months = {"Jan" => "01", "Feb" => "02", "Mar" => "03", "Apr" => "04",
 # Loading
 read_array = yaml_load filename
 
+# Introduction text.
 puts "Would you like to..."
 puts "1) View the list."
 puts "2) Check birth date with name."
+print "Number: "
 input = gets.chomp
 
 if input == "1"
