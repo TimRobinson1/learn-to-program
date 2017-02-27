@@ -25,6 +25,9 @@ y = date[-4..-1]
 birth = Time.new(y, m, d)
 now = Time.now
 current_month = now.to_s[5..6].to_i
+current_day = now.to_s[8..9].to_i
+is_next_year = "#{input}'s next birthday is: #{date[0..6]} 2018"
+is_this_year = "#{input}'s birthday is this year, on #{date[0..5]}."
 
 
 if (read_array[input] == nil)
@@ -32,9 +35,12 @@ if (read_array[input] == nil)
   puts "or it has been mispelled."
 else
   if current_month > m.to_i
-    puts "#{input}'s next birthday is: #{date[0..6]} 2018"
-    puts "He will be #{2018 - y.to_i}."
+    puts is_next_year
+  elsif (current_day > d.to_i) && (current_month > m.to_i)
+    puts is_next_year
+  elsif (current_day == d.to_i) && (current_month == m.to_i)
+    puts "Today is their birthday!"
   else
-    puts "Nah"
+    puts is_this_year
   end
 end
