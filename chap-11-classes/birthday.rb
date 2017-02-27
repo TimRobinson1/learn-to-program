@@ -28,6 +28,9 @@ current_month = now.to_s[5..6].to_i
 current_day = now.to_s[8..9].to_i
 is_next_year = "#{input}'s next birthday is: #{date[0..6]} 2018"
 is_this_year = "#{input}'s birthday is this year, on #{date[0..5]}."
+age = "He will be #{2018 - y.to_i} years old."
+age_soon = "He will be #{2017 - y.to_i} years old."
+age_now = "He is #{2018 - y.to_i} years old."
 
 
 if (read_array[input] == nil)
@@ -36,11 +39,15 @@ if (read_array[input] == nil)
 else
   if current_month > m.to_i
     puts is_next_year
+    puts age
   elsif (current_day > d.to_i) && (current_month > m.to_i)
     puts is_next_year
+    puts age
   elsif (current_day == d.to_i) && (current_month == m.to_i)
     puts "Today is their birthday!"
+    puts age_now
   else
     puts is_this_year
+    puts age_soon
   end
 end
