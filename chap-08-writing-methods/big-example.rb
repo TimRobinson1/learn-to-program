@@ -19,6 +19,18 @@ def englishNumber number
   # write and left... get it?  :)
 
   left  = number
+  write = left/1000000000   # How many billions left to write out?
+  left  = left - write*1000000000
+
+  if write > 0
+    billions  = englishNumber write
+    numString = numString + billions + " billion"
+
+    if left > 0
+      numString = numString + " "
+    end
+  end
+
   write = left/1000000          # How many millions left to write out?
   left  = left - write*1000000
 
