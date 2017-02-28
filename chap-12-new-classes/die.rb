@@ -12,11 +12,12 @@ class Die
 
   def cheat
     number = gets.chomp.to_i
-    while (number > 6 || number < 0) do
-      puts "A die can't show the number #{number}, cheater!"
+    while (number > 6 || number < 1) do
+      puts "A die can't land on that, cheater!"
       number = gets.chomp.to_i
     end
     @number_showing = number
+    "The dice rolled: #{number}"
   end
 
   def showing
