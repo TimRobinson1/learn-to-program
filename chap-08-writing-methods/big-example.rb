@@ -6,7 +6,7 @@ def englishNumber number
     return "zero"
   end
 
-  # No more special cases! No more returns!
+  # No more special cases
 
   numString = ""  # This is the string we will return.
 
@@ -16,7 +16,6 @@ def englishNumber number
 
   # "left" is how much of the number we still have left to write out.
   # "write" is the part we are writing out right now.
-  # write and left... get it?  :)
 
   left  = number
   write = left/1000000000000   # How many trillions left to write out?
@@ -113,23 +112,6 @@ def englishNumber number
     # The "-1" is because onesPlace[3] is 'four', not 'three'.
   end
 
-  # Now we just return "numString"...
+  # Now we just return "numString"
   numString
 end
-
-puts englishNumber(  0)
-puts englishNumber(  9)
-puts englishNumber( 10)
-puts englishNumber( 11)
-puts englishNumber( 17)
-puts englishNumber( 32)
-puts englishNumber( 88)
-puts englishNumber( 99)
-puts englishNumber(100)
-puts englishNumber(101)
-puts englishNumber(234)
-puts englishNumber(3211)
-puts englishNumber(999999)
-puts englishNumber(1500320)
-puts englishNumber(1200013150)
-puts englishNumber(1000000000000)
