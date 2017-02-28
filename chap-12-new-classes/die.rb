@@ -10,10 +10,5 @@ class Die
 
 end
 
-die = Die.new
-die.roll
-puts die.showing
-puts die.showing
-die.roll
-puts die.showing
-puts die.showing
+# This produces 'nil', which in this instance (a dice roll) doesn't make any sense.
+puts Die.new.showing
