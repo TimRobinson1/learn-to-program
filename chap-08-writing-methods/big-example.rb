@@ -19,6 +19,18 @@ def englishNumber number
   # write and left... get it?  :)
 
   left  = number
+  write = left/1000000000000   # How many trillions left to write out?
+  left  = left - write*1000000000000
+
+  if write > 0
+    trillions  = englishNumber write
+    numString = numString + trillions + " trillion"
+
+    if left > 0
+      numString = numString + " "
+    end
+  end
+
   write = left/1000000000   # How many billions left to write out?
   left  = left - write*1000000000
 
@@ -119,4 +131,5 @@ puts englishNumber(234)
 puts englishNumber(3211)
 puts englishNumber(999999)
 puts englishNumber(1500320)
+puts englishNumber(1200013150)
 puts englishNumber(1000000000000)
