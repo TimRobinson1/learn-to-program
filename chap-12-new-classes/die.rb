@@ -7,21 +7,23 @@ class Die
   end
 
   def roll
-    @number_showing = 1 + rand(6)
+    "The dice rolled #{@number_showing = 1 + rand(6)}"
   end
 
   def cheat
     number = gets.chomp.to_i
+
     while (number > 6 || number < 1) do
       puts "A die can't land on that, cheater!"
       number = gets.chomp.to_i
     end
+    
     @number_showing = number
-    "The dice rolled: #{number}"
+    "The dice rolled #{number}"
   end
 
   def showing
-    @number_showing
+    "The dice rolled #{@number_showing}"
   end
 
 end
