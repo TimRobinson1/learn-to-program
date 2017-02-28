@@ -1,5 +1,11 @@
 class Die
 
+  def initialize
+    # initialize is a standard method that runs automatically when the object is called on.
+    # This calls the method 'roll', but it's not the only thing that can be put here.
+    roll
+  end
+
   def roll
     @number_showing = 1 + rand(6)
   end
