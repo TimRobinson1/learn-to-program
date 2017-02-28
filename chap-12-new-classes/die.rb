@@ -11,8 +11,7 @@ class Die
   end
 
   def cheat
-    @number_showing = gets.chomp
-    number = @number_showing.to_i
+    number = gets.chomp.to_i
     while (number > 6 || number < 0) do
       puts "A die can't show the number #{number}, cheater!"
       number = gets.chomp.to_i
@@ -29,5 +28,4 @@ end
 # This produces 'nil', which in this instance (a dice roll) doesn't make any sense.
 die = Die.new
 
-puts die.showing
 puts die.cheat
