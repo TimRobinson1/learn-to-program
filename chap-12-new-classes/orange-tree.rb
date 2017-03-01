@@ -6,19 +6,22 @@ class OrangeTree
     @age = 0
     @height = 1
     @growing_fruit = false
-    @fruit_collected = 0
     @alive = true
+    @fruit = 0
   end
 
   def time_passes
     @age += 1
     @height += 0.5
     print "A year passes... "
+    if @fruit > 0
+      puts "last year's #{@fruit} oranges have fallen off..."
+    end
     if @age == 10
       puts "The tree has grown old.  It has withered and died."
       exit(0)
     elsif @age > 3
-      puts "the tree has grown fruit!"
+      puts "the tree has grown fresh fruit!"
       @growing_fruit = true
       @fruit = (1 + rand(9))
     else
