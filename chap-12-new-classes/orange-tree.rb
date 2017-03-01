@@ -13,14 +13,15 @@ class OrangeTree
   def time_passes
     @age += 1
     @height += 0.5
+    print "A year passes... "
     if @age == 10
-      puts "A year passes... The tree has grown old.  It has withered and died."
+      puts "The tree has grown old.  It has withered and died."
       exit(0)
     elsif @age > 3
-      puts "A year passes... the tree has grown fruit!"
+      puts "the tree has grown fruit!"
       @growing_fruit = true
     else
-      puts "A year passes... no fruit this year."
+      puts "no fruit this year."
     end
   end
 
@@ -30,7 +31,7 @@ class OrangeTree
 
   def age
     if @age == 1
-      puts "This tree is #{@age} year old."
+      puts "The tree is #{@age} year old."
     else
       puts "The tree is #{@age} years old."
     end
