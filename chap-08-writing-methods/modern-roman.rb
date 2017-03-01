@@ -1,8 +1,18 @@
 def romanise number
 
-  # For tens, or 'X'
+  # For fifties, or 'L'
+  times = number / 50
+  answer = "L"*times
+  number = number - times*50
+
+  # For tens, or 'X', and 'XL' for forties
   times = number / 10
-  answer = "X"*times
+  if times == 4
+    answer += "XL"
+  else
+    answer += "X"*times
+  end
+
   number = number - times*10
 
   # For fives, or 'V'
@@ -45,3 +55,22 @@ romanise(17)
 romanise(18)
 romanise(19)
 romanise(20)
+romanise(38)
+romanise(39)
+romanise(40)
+romanise(41)
+romanise(42)
+romanise(43)
+romanise(44)
+romanise(45)
+romanise(46)
+romanise(47)
+romanise(48)
+romanise(49)
+romanise(50)
+romanise(51)
+romanise(52)
+romanise(53)
+romanise(54)
+romanise(55)
+romanise(90)
