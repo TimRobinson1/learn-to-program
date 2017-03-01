@@ -48,8 +48,12 @@ class OrangeTree
   end
 
   def count
-    if @growing_fruit
-      puts "There are #{@fruit} fruit on the tree!"
+    if @growing_fruit && (@fruit != 0)
+      if @fruit == 1
+        puts "There's only one orange on the tree."
+      else
+        puts "There are #{@fruit} fresh oranges on the tree!"
+      end
     else
       puts "There's no fruit on the tree."
     end
