@@ -2,9 +2,14 @@
 # i.e. 9 is VIIII rather than IX
 
 def romanise number
+  # For hundreds, or 'C'
+  times = number / 100
+  answer = "C"*times
+  number = number - times*100
+
   # For fifties, or 'L'
   times = number / 50
-  answer = "L"*times
+  answer += "L"*times
   number = number - times*50
 
   # For tens, or 'X'
@@ -21,4 +26,6 @@ def romanise number
   puts answer
 end
 
-romanise(68)
+romanise(168)
+
+romanise(32)
