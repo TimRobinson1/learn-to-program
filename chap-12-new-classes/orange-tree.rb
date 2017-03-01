@@ -20,6 +20,7 @@ class OrangeTree
     elsif @age > 3
       puts "the tree has grown fruit!"
       @growing_fruit = true
+      @fruit = (1 + rand(9))
     else
       puts "no fruit this year."
     end
@@ -38,8 +39,17 @@ class OrangeTree
   end
 
   def pick
-    if @growing_fruit == true
+    if @growing_fruit && (@fruit != 0)
       puts "You plucked a delicious fruit!"
+      @fruit -= 1
+    else
+      puts "There's no fruit on the tree to pick."
+    end
+  end
+
+  def count
+    if @growing_fruit
+      puts "There are #{@fruit} fruit on the tree!"
     else
       puts "There's no fruit on the tree."
     end
@@ -55,6 +65,7 @@ loop do
   puts "2) Check height"
   puts "3) Check age"
   puts "4) Pick fruit"
+  puts "5) Count fruit"
 
   input = gets.chomp
   if input == "1"
@@ -65,6 +76,8 @@ loop do
     tree.age
   elsif input == "4"
     tree.pick
+  elsif input == "5"
+    tree.count
   else
     puts "That's not an option.  Please pick a number."
   end
