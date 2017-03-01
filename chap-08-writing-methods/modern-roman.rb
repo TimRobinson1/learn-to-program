@@ -1,8 +1,28 @@
 def romanise number
 
+  # For thousands, or 'M'
+  times = number / 1000
+  answer = "M"*times
+  number = number - times*1000
+
+  # For nine-hundreds, or 'CM'
+  times = number / 900
+  answer += "CM"*times
+  number = number - times*900
+
+  # For five-hundreds, or 'D'
+  times = number / 500
+  answer += "D"*times
+  number = number - times*500
+
+  # For four-hundreds, or 'CD'
+  times = number / 400
+  answer += "CD"*times
+  number = number - times*400
+
   # For hundreds, or 'C'
   times = number / 100
-  answer = "C"*times
+  answer += "C"*times
   number = number - times*100
 
   # For nineties, or 'XC'
@@ -77,10 +97,13 @@ romanise(46)
 romanise(90)
 romanise(91)
 romanise(94)
-romanise(97)
 romanise(98)
 romanise(99)
 romanise(100)
 romanise(124)
 romanise(200)
-romanise(399)
+romanise(400)
+romanise(474)
+romanise(900)
+romanise(999)
+romanise(1000)
