@@ -1,8 +1,13 @@
 def romanise number
 
+  # For hundreds, or 'C'
+  times = number / 100
+  answer = "C"*times
+  number = number - times*100
+
   # For nineties, or 'XC'
   times = number / 90
-  answer = "XC"*times
+  answer += "XC"*times
   number = number - times*90
 
   # For fifties, or 'L'
@@ -76,3 +81,6 @@ romanise(97)
 romanise(98)
 romanise(99)
 romanise(100)
+romanise(124)
+romanise(200)
+romanise(399)
