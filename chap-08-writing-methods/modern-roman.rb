@@ -1,8 +1,13 @@
 def romanise number
 
+  # For nineties, or 'XC'
+  times = number / 90
+  answer = "XC"*times
+  number = number - times*90
+
   # For fifties, or 'L'
   times = number / 50
-  answer = "L"*times
+  answer += "L"*times
   number = number - times*50
 
   # For tens, or 'X', and 'XL' for forties
@@ -64,13 +69,10 @@ romanise(43)
 romanise(44)
 romanise(45)
 romanise(46)
-romanise(47)
-romanise(48)
-romanise(49)
-romanise(50)
-romanise(51)
-romanise(52)
-romanise(53)
-romanise(54)
-romanise(55)
 romanise(90)
+romanise(91)
+romanise(94)
+romanise(97)
+romanise(98)
+romanise(99)
+romanise(100)
