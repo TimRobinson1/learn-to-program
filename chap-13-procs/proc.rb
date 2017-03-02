@@ -7,3 +7,12 @@ end
 toast.call
 toast.call
 toast.call
+
+# Procs can also take parameters
+
+do_you_like = Proc.new do |good_things|
+  puts "I REALLY like #{good_things}"
+end
+
+do_you_like.call "chocolate"
+do_you_like.call "ice cream"
