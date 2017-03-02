@@ -1,18 +1,27 @@
-# This is a method that takes a proc as a variable.
+# These are methods that takes a proc as a variable.
 
-def do_self_importantly some_proc
-  puts "Everybody just hold on!  I'm doing something..."
+def maybe_do some_proc
+  if rand(2) == 0
+    some_proc.call
+  end
+end
+
+def twice_do some_proc
   some_proc.call
-  puts "Okay everyone, I'm done.  As you were."
+  some_proc.call
 end
 
-say_hello = Proc.new do
-  puts "Hello"
+wink = Proc.new do
+  puts "<glance>"
 end
 
-say_bye = Proc.new do
-  puts "Goodbye"
+glance = Proc.new do
+  puts "<glance>"
 end
 
-do_self_importantly say_hello
-do_self_importantly say_bye
+maybe_do wink
+maybe_do wink
+maybe_do glance
+maybe_do glance
+twice_do wink
+twice_do glance
